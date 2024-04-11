@@ -43,6 +43,7 @@ class HomeController extends AbstractController
     #[Route('/project/new', name: 'app_new_project', methods: ['POST','GET'])]
     public function createProject(Request $request): Response
     {
+    
         $project = new Project();
         $form = $this->createForm(ProjectType::class, $project);
         $form->handleRequest($request);
