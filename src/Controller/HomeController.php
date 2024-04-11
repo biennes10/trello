@@ -49,10 +49,6 @@ class HomeController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $entityManager = $this->entityManager;
-            $categorieDefault = new Categorie();
-            $categorieDefault->setName("Defaut");   
-            $categorieDefault->setProject($project);
-            $entityManager->persist($categorieDefault);
             
             $entityManager->persist($project);
             $entityManager->flush();

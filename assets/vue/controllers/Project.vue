@@ -27,7 +27,7 @@
       </form>
       <ul :style="{ 'margin-top': '20px'}" >
         <li v-for="ticket in category.tickets" :key="ticket.id">
-          {{ ticket.name }} {{ticket.description}}
+         <strong>Nom:</strong> {{ ticket.name }}  <strong>Description:</strong> {{ticket.description}}
           <button class="btn btn-danger" @click="deleteTicket(category.id, ticket.id)">Supprimer</button>
         </li>
       </ul>
