@@ -1,0 +1,7 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Projets {{project.name}}{% endblock %}
+
+{% block body %}
+   <div {{ vue_component('Project', {'projectId': project.id }) }}></div>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Acceuil{% endblock %}
+
+{% block body %}
+
+<div style="text-align:center">
+    <h2 style='margin-bottom:30px'>Aller sur un projet :</h2>
+    {% for project in app.user.projects %}
+        <a class="btn btn-secondary" href="{{path('project_show',{id:project.id})}}" role="button">{{project.name}}</a>
+    {% endfor %}
+    <div style="margin-top:50px">
+    <a href="{{ path('app_new_project') }}" class="btn btn-primary">Créer un nouveau projet</a>
+    </div>
+</div>
+{% endblock %}
